@@ -7,7 +7,13 @@ class BooksController < ApplicationController
 
   def show
     @book_conversations = @book.conversation
-    # byebug
+    
+    # NOTE: this is all just a test to the good reads api
+    res = RestClient.get 'https://www.goodreads.com/search.xml?key=IHvX4yayH8zIus6rew&q=Ender%27s+Game'
+    doc = Nokogiri::XML(res.body)
+    final_output = Hash.from_xml(doc.to_s)
+    # final_output["GoodreadsResponse"]["search"]["results"]["work"]
+
   end
 
   private

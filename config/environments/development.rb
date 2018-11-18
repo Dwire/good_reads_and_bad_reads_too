@@ -58,4 +58,8 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  # good reads api keys
+    # config.good_reads_api_key = "IHvX4yayH8zIus6rew"
+    # config.good_reads_secret_api_key = "r1Rx5ih8rDnaC4E9JUeLMqh9utKYdpTGs7zQsz6WQ"
 end

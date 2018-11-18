@@ -1,7 +1,8 @@
 <h1>Book Title: <%= @book.title %></h1>
-<h7>Genre: <%= @book.author %></h7>
-<h7>Page Count: <%= @book.page_count %></h7>
-<p>Content <%= @book.content %></p>
+<h7>Author: <%= @book.author %></h7></br>
+<h7>Genre: <%= @book.genre %></h7></br>
+<h7>Page Count: <%= @book.page_count %></h7></br>
+<h7>Content: <%= @book.content %></h7>
 
 <h2>READERS OF BOOK</h2>
 <% @book.users.each do |user| %>

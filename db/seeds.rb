@@ -11,10 +11,11 @@ Book.destroy_all
 UserBook.destroy_all
 UserReview.destroy_all
 
+users = %w(Robin Greg Brandon Forrest Eva Amelia David Joan Rose Tedd)
 
-10.times do
+users.each do |user|
   User.create(
-    name: Faker::GameOfThrones.character,
+    name: user,
     bio: Faker::GameOfThrones.quote,
     genres: [Faker::Book.genre, Faker::Book.genre]
   )
@@ -25,7 +26,7 @@ end
     title: Faker::Book.title,
     genre: Faker::Book.genre,
     author: Faker::Book.author,
-    page_count: [100..1000].sample,
+    page_count: rand(100..1000),
     content: Faker::Lorem.paragraph(2),
     url_link: Faker::LoremPixel.image("50x60")
   )
