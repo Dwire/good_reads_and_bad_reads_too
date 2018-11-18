@@ -1,0 +1,19 @@
+<h1>Book Title: <%= @book.title %></h1>
+<h7>Genre: <%= @book.author %></h7>
+<h7>Page Count: <%= @book.page_count %></h7>
+<p>Content <%= @book.content %></p>
+
+<h2>READERS OF BOOK</h2>
+<% @book.users.each do |user| %>
+  <li><%= link_to user.name, user %></li>
+<% end %>
+
+
+
+<h2>Conversation About BOOK</h2>
+<h4>Average Rating: <%= @book.average_rating %></h4>
+<% @book_conversations.each do |convo| %>
+  <%= convo.user.name %>: <%= convo.content %>
+  </br>
+  </br>
+<% end %>

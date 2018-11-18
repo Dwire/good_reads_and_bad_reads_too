@@ -1,0 +1,12 @@
+<h1>User Name: <%= @user.name %></h1>
+<p>Bio: <%= @user.bio %></p>
+
+<h7>Favorite Genres</h7>
+<% @user.genres.each do |genre| %>
+  <li><%= genre %></li>
+<% end %>
+
+<h2>BOOKS READ</h2>
+<% @user.books.each do |book| %>
+  <li><%= link_to book.title, book %></li>
+<% end %>

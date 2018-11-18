@@ -1,0 +1,7 @@
+<% @user_books.each do |u_b| %>
+  <h1>Reader: <%= u_b.user.name %></h1>
+  <h4>Book: <%= u_b.book.title %></h4>
+  <h4>Review: <%= u_b.reader_review %></h4>
+  <h4>Rating <%= u_b.reader_rating %></h4>
+  <h4>Date Finish: <%= u_b.finished_book %></h4>
+<% end %>
